@@ -26,6 +26,7 @@ export function dealWithFile() {
         const afterEqualIndex = line
           .substring(equalIndex + 1, line.length)
           .trim();
+        lineCellWord.dataset.key = `${afterEqualIndex}`;
         lineCellWord.textContent = `${afterEqualIndex}`;
         fileAsObject[beforeEqualIndex] = `${afterEqualIndex}`;
       }

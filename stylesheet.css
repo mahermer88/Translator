@@ -6,9 +6,6 @@
   margin: 0;
   font-family: "Concert One", cursive !important;
 }
-::-webkit-scrollbar {
-  display: none;
-}
 video {
   object-fit: cover;
   width: 100%;
@@ -20,13 +17,11 @@ video {
 }
 header {
   overflow: hidden;
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  font-size: 2rem;
   background-color: white;
   border: 1px solid black;
 }
@@ -36,10 +31,14 @@ header {
   align-items: center;
   justify-content: space-between;
   color: rgb(252, 183, 55);
+  font-size: 1.2rem;
 }
 header img {
-  width: 15rem;
+  width: 10rem;
   margin-right: 1rem;
+}
+#google_translate_element {
+  text-align: center;
 }
 .choose {
   display: flex;
@@ -72,21 +71,9 @@ button:hover {
   flex-direction: row;
   margin-top: 1rem;
 }
-#google_translate_element {
-  width: 15%;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  padding: 1rem;
-  margin-right: 1rem;
-}
+
 #table-container {
-  width: 80%;
-  height: 40rem;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior: contain;
+  width: 100%;
 }
 table {
   width: 100%;

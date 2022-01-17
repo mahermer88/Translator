@@ -1,5 +1,6 @@
 let translatedFileAsArray = [];
 let translatedWordsAsArray = [];
+let onlyTranslatedWordsAsArray = [];
 
 export function dealWithTranslated() {
   const downloadName = document.getElementById("download-name");
@@ -10,6 +11,7 @@ export function dealWithTranslated() {
     const translatedWord = `${line.children[1].textContent}`;
     translatedWordsAsArray.push(`${originalWord}=${translatedWord}\n`);
     translatedFileAsArray.push(`${targetPart}=${translatedWord}\n`);
+    onlyTranslatedWordsAsArray.push(`${translatedWord}\n`);
   }
   const translatedWords = new File(
     translatedWordsAsArray,
@@ -27,4 +29,12 @@ export function dealWithTranslated() {
     }
   );
   saveAs(translatedFile);
+      const onlyTranslatedWords = new File(
+        onlyTranslatedWordsAsArray,
+        `${downloadName.value}_OnlyWords.txt`,
+        {
+          type: "text/plain;charset=utf-8",
+        }
+      );
+      saveAs(onlyTranslatedWords);
 }
